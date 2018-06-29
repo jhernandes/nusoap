@@ -17,14 +17,14 @@ edit your `composer.json`
 
 ``` json
     "require": {
-        "phramz/nusoap": "dev-master"
+        "jhernandes/nusoap": "dev-master"
     }
 ```
 
 or via command line
 
-``` 
-php composer.phar require phramz/nusoap
+```
+php composer.phar require jhernandes/nusoap
 ```
 
 License
