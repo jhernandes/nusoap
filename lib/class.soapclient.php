@@ -95,7 +95,7 @@ class nusoap_client extends nusoap_base
      */
     public function __construct($endpoint, $wsdl = false, $proxyhost = false, $proxyport = false, $proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30, $portName = '')
     {
-        parent::nusoap_base();
+        parent::__construct();
         $this->endpoint = $endpoint;
         $this->proxyhost = $proxyhost;
         $this->proxyport = $proxyport;

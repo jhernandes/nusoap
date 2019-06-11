@@ -69,7 +69,7 @@ class wsdl extends nusoap_base
      */
     public function __construct($wsdl = '', $proxyhost = false, $proxyport = false, $proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30, $curl_options = null, $use_curl = false)
     {
-        parent::nusoap_base();
+        parent::__construct();
         $this->debug("ctor wsdl=$wsdl timeout=$timeout response_timeout=$response_timeout");
         $this->proxyhost = $proxyhost;
         $this->proxyport = $proxyport;
@@ -863,11 +863,13 @@ class wsdl extends nusoap_base
 				    <a href='#' onclick='popout()'><font color='#ffffff'>Close</font></a><br><br>";
             foreach ($data as $donnie => $marie) {
                 // loop through opdata
-                if ($donnie == 'input' || $donnie == 'output') { // show input/output data
+                if ($donnie == 'input' || $donnie == 'output') {
+                    // show input/output data
                     $b .= "<font color='white'>".ucfirst($donnie).':</font><br>';
                     foreach ($marie as $captain => $tenille) {
                         // loop through data
-                        if ($captain == 'parts') { // loop thru parts
+                        if ($captain == 'parts') {
+                            // loop thru parts
                             $b .= "&nbsp;&nbsp;$captain:<br>";
                             //if(is_array($tenille)){
                             foreach ($tenille as $joanie => $chachi) {
