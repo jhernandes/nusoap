@@ -93,7 +93,7 @@ class nusoap_client extends nusoap_base
      * @param    string $portName optional portName in WSDL document
      * @access   public
      */
-    public function nusoap_client($endpoint, $wsdl = false, $proxyhost = false, $proxyport = false, $proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30, $portName = '')
+    public function __construct($endpoint, $wsdl = false, $proxyhost = false, $proxyport = false, $proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30, $portName = '')
     {
         parent::nusoap_base();
         $this->endpoint = $endpoint;

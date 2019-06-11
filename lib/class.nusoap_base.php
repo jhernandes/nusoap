@@ -216,14 +216,14 @@ class nusoap_base
      * @see    expandEntities
      */
     public $xmlEntities = array('quot' => '"', 'amp' => '&',
-        'lt'                            => '<', 'gt'  => '>', 'apos' => "'");
+        'lt'                               => '<', 'gt'  => '>', 'apos' => "'");
 
     /**
      * constructor
      *
      * @access    public
      */
-    public function nusoap_base()
+    public function __construct()
     {
         $this->debugLevel = $GLOBALS['_transient']['static']['nusoap_base']['globalDebugLevel'];
     }

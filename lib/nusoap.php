@@ -216,14 +216,14 @@ class nusoap_base
      * @see    expandEntities
      */
     public $xmlEntities = array('quot' => '"', 'amp' => '&',
-        'lt'                            => '<', 'gt'  => '>', 'apos' => "'");
+        'lt'                               => '<', 'gt'  => '>', 'apos' => "'");
 
     /**
      * constructor
      *
      * @access    public
      */
-    public function nusoap_base()
+    public function __construct()
     {
         $this->debugLevel = $GLOBALS['_transient']['static']['nusoap_base']['globalDebugLevel'];
     }
@@ -5549,11 +5549,13 @@ class wsdl extends nusoap_base
 				    <a href='#' onclick='popout()'><font color='#ffffff'>Close</font></a><br><br>";
             foreach ($data as $donnie => $marie) {
                 // loop through opdata
-                if ($donnie == 'input' || $donnie == 'output') { // show input/output data
+                if ($donnie == 'input' || $donnie == 'output') {
+                    // show input/output data
                     $b .= "<font color='white'>".ucfirst($donnie).':</font><br>';
                     foreach ($marie as $captain => $tenille) {
                         // loop through data
-                        if ($captain == 'parts') { // loop thru parts
+                        if ($captain == 'parts') {
+                            // loop thru parts
                             $b .= "&nbsp;&nbsp;$captain:<br>";
                             //if(is_array($tenille)){
                             foreach ($tenille as $joanie => $chachi) {
